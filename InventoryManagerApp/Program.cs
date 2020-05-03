@@ -19,4 +19,7 @@ namespace InventoryManagerApp
             Application.Run(new Form1());
         }
     }
+ 
+    // class inventory
+    
 }

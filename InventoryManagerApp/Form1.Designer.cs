@@ -41,7 +41,6 @@
             this.selectButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
-            this.addedItemListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // itemIDTextBox
@@ -106,14 +105,15 @@
             // inventoryListBox
             // 
             this.inventoryListBox.FormattingEnabled = true;
-            this.inventoryListBox.Location = new System.Drawing.Point(551, 129);
+            this.inventoryListBox.Location = new System.Drawing.Point(261, 129);
             this.inventoryListBox.Name = "inventoryListBox";
-            this.inventoryListBox.Size = new System.Drawing.Size(137, 147);
+            this.inventoryListBox.Size = new System.Drawing.Size(240, 147);
             this.inventoryListBox.TabIndex = 8;
+            this.inventoryListBox.SelectedIndexChanged += new System.EventHandler(this.inventoryListBox_SelectedIndexChanged);
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(426, 321);
+            this.exitButton.Location = new System.Drawing.Point(423, 320);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 10;
@@ -153,7 +153,7 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(426, 292);
+            this.searchButton.Location = new System.Drawing.Point(423, 291);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 15;
@@ -161,20 +161,11 @@
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // addedItemListBox
-            // 
-            this.addedItemListBox.FormattingEnabled = true;
-            this.addedItemListBox.Location = new System.Drawing.Point(261, 129);
-            this.addedItemListBox.Name = "addedItemListBox";
-            this.addedItemListBox.Size = new System.Drawing.Size(240, 147);
-            this.addedItemListBox.TabIndex = 16;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.addedItemListBox);
+            this.ClientSize = new System.Drawing.Size(620, 440);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.selectButton);
@@ -211,7 +202,6 @@
         private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.ListBox addedItemListBox;
     }
 }
 
