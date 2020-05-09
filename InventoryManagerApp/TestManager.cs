@@ -1,118 +1,92 @@
-﻿using System;
+﻿using InventoryManagerApp;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace inventorymanager
 {
-    class Manager
+    public class Manager
     {
-        // create new array to hold inventory items
-        Inventory[] items;
 
-        public void addItem(Inventory item )
+        //change from array to list 
+            public List<InventoryItem> Inventory { get; private set; } = new List<InventoryItem>();
+            public static int initialQuantiy { get; } = 10;
 
-            //user enters item attributes in text boxes
-            //button click adds data to items array
-            //increase # of items in array
-            //update list box display
-        {
-            for (int index = 0; index < items.Length; index++)
+            
+        //add an item to inventory
+            public InventoryItem AddItem(InventoryItem item)
             {
-                Console.WriteLine("Enter an item:");
-                Console.ReadLine();
+                if (ContainsItem(item))
+                {
+                    InventoryItem foundItem = FindItem(item);
+                    foundItem.Quantity += item.Quantity;
+                    return foundItem;
+                }
+                else
+                {
+                    Inventory.Add(item);
+                    return item;
+                }
             }
-        }
 
-        public void removeItem()
-
-        //display all items in items array
-        //user selects an item to remove
-        //item is removed from items array
-        //items.Length decreased by 1
-        //update list box display
-
-        {
-        //var = user input
-        //var item_to_remove = " ";
-        Console.WriteLine("Enter an item:");
-        Console.ReadLine();
-
-        //match user input to attributes of an object in items array
-
-        }
-
-        public void restockItem()
-        //restock button
-        //button click changes quantity field of all items in array to "10" 
-        //update list box display
-        
-        { 
-            foreach (var item in items)
+        // find item by name
+            public InventoryItem FindItem(string itemName)
             {
-             //grab original quantity data
-             //update quantity data in each object to 10
+                return Inventory.Find(x => x.Equals(itemName));
             }
-        }
 
-        public void showAll()
-        {
-            for (int index = 0; index < items.Length; index++)
+            public InventoryItem FindItem(InventoryItem item)
             {
-                Console.Write(items[index] + " ");
+                return Inventory.Find(x => x.Equals(item));
             }
-        }
 
-        public void showSpecific()
-        { 
-        //takes user input search by name or ID in search textbox
-        //could use dropdown
-        //matches data to array data
-        //displays only the item that matches
-        //update list box
+            public List<InventoryItem> FindItems(string itemName, string desc)
+            {
+                List<InventoryItem> results = new List<InventoryItem>();
+                return Inventory.FindAll(x => x.Equals(itemName, desc));
+            }
+
+            public bool ContainsItem(InventoryItem item)
+            {
+                return Inventory.Contains(item);
+            }
+
+            //remove item
+            public bool RemoveItem(InventoryItem item)
+            {
+                if (ContainsItem(item))
+                {
+                    Inventory.Remove(item);
+                    return true;
+                }
+                return false;
+            }
+            
+            //set quantity = 10 if out of stock
+            public void RestockItem(string item)
+            {
+                InventoryItem inventoryItem = FindItem(item);
+                if (inventoryItem.OutOfStock())
+                {
+                    inventoryItem.Quantity = 10;
+                }
+            }
+
+            //restock item
+            //public void RestockItem(InventoryItem item)
+            //{
+            //InventoryItem inventoryItem = FindItem(item);
+            //inventoryItem.Quantity = initialQuantiy;
+            //}
+
+            public override string ToString()
+            {
+                string value = "";
+                foreach (InventoryItem item in Inventory)
+                {
+                    value += "[" + item.ToString() + "]\n\n";
+                }
+                return value;
+            }
         }
     }
-    class Inventory
-    {
-        private int _itemID;
-        private string _itemName;
-        private string _itemDescription;
-        private string _manufacturerID;
-        private int _quantity;
-        private string _storageLocation;
-
-        //constructor
-
-        public Inventory()
-        {
-            //set ID = unique random number?
-
-            _itemID = 0;
-            _itemName = "";
-            _itemDescription = "";
-            _manufacturerID = "";
-            _quantity = 0;
-            _storageLocation = "";
-        }
-
-        public int ItemID
-        { get { return _itemID; } set { _itemID = value; } }
-
-        public string ItemName
-        { get { return _itemName; } set { _itemName = value; } }
-
-        public string ItemDescription
-        { get { return _itemDescription; } set { _itemDescription = value; } }
-
-        public string ManufacturerID
-        { get { return _manufacturerID; } set { _manufacturerID = value; } }
-
-        public int Quantity
-        { get { return _quantity; } set { _quantity = value; } }
-
-        public string StorageLocation
-        { get { return _storageLocation; } set { _storageLocation = value; } }
-
-    }
-}
-
-

@@ -28,168 +28,143 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.itemIDTextBox = new System.Windows.Forms.TextBox();
-            this.itemNameTextBox = new System.Windows.Forms.TextBox();
-            this.itemDescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.manufacturerIDTextBox = new System.Windows.Forms.TextBox();
-            this.quantityTextBox = new System.Windows.Forms.TextBox();
-            this.storageLocationTextBox = new System.Windows.Forms.TextBox();
-            this.addItemButton = new System.Windows.Forms.Button();
-            this.inventoryListBox = new System.Windows.Forms.ListBox();
-            this.exitButton = new System.Windows.Forms.Button();
-            this.removeButton = new System.Windows.Forms.Button();
-            this.selectButton = new System.Windows.Forms.Button();
-            this.editButton = new System.Windows.Forms.Button();
-            this.searchButton = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.removeItemButton = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.selectItemButton = new System.Windows.Forms.Button();
+            this.updateItemButton = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // itemIDTextBox
+            // listBox1
             // 
-            this.itemIDTextBox.Location = new System.Drawing.Point(106, 129);
-            this.itemIDTextBox.Name = "itemIDTextBox";
-            this.itemIDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.itemIDTextBox.TabIndex = 0;
-            this.itemIDTextBox.Text = "Item ID";
-            this.itemIDTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(251, 98);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 260);
+            this.listBox1.TabIndex = 0;
             // 
-            // itemNameTextBox
+            // textBox1
             // 
-            this.itemNameTextBox.Location = new System.Drawing.Point(106, 169);
-            this.itemNameTextBox.Name = "itemNameTextBox";
-            this.itemNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.itemNameTextBox.TabIndex = 1;
-            this.itemNameTextBox.Text = "Name";
+            this.textBox1.Location = new System.Drawing.Point(88, 115);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "name";
             // 
-            // itemDescriptionTextBox
+            // textBox2
             // 
-            this.itemDescriptionTextBox.Location = new System.Drawing.Point(106, 209);
-            this.itemDescriptionTextBox.Name = "itemDescriptionTextBox";
-            this.itemDescriptionTextBox.Size = new System.Drawing.Size(100, 20);
-            this.itemDescriptionTextBox.TabIndex = 2;
-            this.itemDescriptionTextBox.Text = "Description";
+            this.textBox2.Location = new System.Drawing.Point(88, 165);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "description";
             // 
-            // manufacturerIDTextBox
+            // textBox3
             // 
-            this.manufacturerIDTextBox.Location = new System.Drawing.Point(106, 248);
-            this.manufacturerIDTextBox.Name = "manufacturerIDTextBox";
-            this.manufacturerIDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.manufacturerIDTextBox.TabIndex = 3;
-            this.manufacturerIDTextBox.Text = "Manufacturer ID";
+            this.textBox3.Location = new System.Drawing.Point(88, 215);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 3;
+            this.textBox3.Text = "manufacturer ID";
             // 
-            // quantityTextBox
+            // textBox4
             // 
-            this.quantityTextBox.Location = new System.Drawing.Point(106, 291);
-            this.quantityTextBox.Name = "quantityTextBox";
-            this.quantityTextBox.Size = new System.Drawing.Size(100, 20);
-            this.quantityTextBox.TabIndex = 5;
-            this.quantityTextBox.Text = "Quantity";
+            this.textBox4.Location = new System.Drawing.Point(88, 265);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.TabIndex = 4;
+            this.textBox4.Text = "quantity";
             // 
-            // storageLocationTextBox
+            // textBox5
             // 
-            this.storageLocationTextBox.Location = new System.Drawing.Point(106, 326);
-            this.storageLocationTextBox.Name = "storageLocationTextBox";
-            this.storageLocationTextBox.Size = new System.Drawing.Size(100, 20);
-            this.storageLocationTextBox.TabIndex = 6;
-            this.storageLocationTextBox.Text = "Storage Location";
+            this.textBox5.Location = new System.Drawing.Point(88, 320);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 22);
+            this.textBox5.TabIndex = 5;
+            this.textBox5.Text = "storage location";
             // 
-            // addItemButton
+            // button1
             // 
-            this.addItemButton.Location = new System.Drawing.Point(261, 291);
-            this.addItemButton.Name = "addItemButton";
-            this.addItemButton.Size = new System.Drawing.Size(75, 23);
-            this.addItemButton.TabIndex = 7;
-            this.addItemButton.Text = "ADD ITEM";
-            this.addItemButton.UseVisualStyleBackColor = true;
-            this.addItemButton.Click += new System.EventHandler(this.addItemButton_Click);
+            this.button1.Location = new System.Drawing.Point(101, 370);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "ADD";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // inventoryListBox
+            // removeItemButton
             // 
-            this.inventoryListBox.FormattingEnabled = true;
-            this.inventoryListBox.Location = new System.Drawing.Point(261, 129);
-            this.inventoryListBox.Name = "inventoryListBox";
-            this.inventoryListBox.Size = new System.Drawing.Size(240, 147);
-            this.inventoryListBox.TabIndex = 8;
-            this.inventoryListBox.SelectedIndexChanged += new System.EventHandler(this.inventoryListBox_SelectedIndexChanged);
+            this.removeItemButton.Location = new System.Drawing.Point(101, 399);
+            this.removeItemButton.Name = "removeItemButton";
+            this.removeItemButton.Size = new System.Drawing.Size(75, 23);
+            this.removeItemButton.TabIndex = 7;
+            this.removeItemButton.Text = "REMOVE";
+            this.removeItemButton.UseVisualStyleBackColor = true;
             // 
-            // exitButton
+            // textBox6
             // 
-            this.exitButton.Location = new System.Drawing.Point(423, 320);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 23);
-            this.exitButton.TabIndex = 10;
-            this.exitButton.Text = "EXIT";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.textBox6.Location = new System.Drawing.Point(365, 426);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 22);
+            this.textBox6.TabIndex = 8;
             // 
-            // removeButton
+            // selectItemButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(342, 320);
-            this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(75, 23);
-            this.removeButton.TabIndex = 11;
-            this.removeButton.Text = "REMOVE";
-            this.removeButton.UseVisualStyleBackColor = true;
-            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
+            this.selectItemButton.Location = new System.Drawing.Point(272, 368);
+            this.selectItemButton.Name = "selectItemButton";
+            this.selectItemButton.Size = new System.Drawing.Size(75, 23);
+            this.selectItemButton.TabIndex = 9;
+            this.selectItemButton.Text = "SELECT";
+            this.selectItemButton.UseVisualStyleBackColor = true;
             // 
-            // selectButton
+            // updateItemButton
             // 
-            this.selectButton.Location = new System.Drawing.Point(261, 320);
-            this.selectButton.Name = "selectButton";
-            this.selectButton.Size = new System.Drawing.Size(75, 23);
-            this.selectButton.TabIndex = 13;
-            this.selectButton.Text = "SELECT";
-            this.selectButton.UseVisualStyleBackColor = true;
-            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
+            this.updateItemButton.Location = new System.Drawing.Point(272, 397);
+            this.updateItemButton.Name = "updateItemButton";
+            this.updateItemButton.Size = new System.Drawing.Size(75, 23);
+            this.updateItemButton.TabIndex = 10;
+            this.updateItemButton.Text = "UPDATE";
+            this.updateItemButton.UseVisualStyleBackColor = true;
             // 
-            // editButton
+            // button5
             // 
-            this.editButton.Location = new System.Drawing.Point(342, 291);
-            this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(75, 23);
-            this.editButton.TabIndex = 14;
-            this.editButton.Text = "RE-STOCK";
-            this.editButton.UseVisualStyleBackColor = true;
-            this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
-            // searchButton
-            // 
-            this.searchButton.Location = new System.Drawing.Point(423, 291);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 23);
-            this.searchButton.TabIndex = 15;
-            this.searchButton.Text = "SEARCH";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            this.button5.Location = new System.Drawing.Point(272, 426);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "SEARCH";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 440);
-            this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.editButton);
-            this.Controls.Add(this.selectButton);
-            this.Controls.Add(this.removeButton);
-            this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.inventoryListBox);
-            this.Controls.Add(this.addItemButton);
-            this.Controls.Add(this.storageLocationTextBox);
-            this.Controls.Add(this.quantityTextBox);
-            this.Controls.Add(this.manufacturerIDTextBox);
-            this.Controls.Add(this.itemDescriptionTextBox);
-            this.Controls.Add(this.itemNameTextBox);
-            this.Controls.Add(this.itemIDTextBox);
+            this.ClientSize = new System.Drawing.Size(498, 534);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.updateItemButton);
+            this.Controls.Add(this.selectItemButton);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.removeItemButton);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBox1);
             this.Name = "Form1";
-            this.Text = "Inventory Manager";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox itemIDTextBox;
         private System.Windows.Forms.TextBox itemNameTextBox;
         private System.Windows.Forms.TextBox itemDescriptionTextBox;
         private System.Windows.Forms.TextBox manufacturerIDTextBox;
@@ -200,8 +175,21 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button removeButton;
         private System.Windows.Forms.Button selectButton;
-        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button restockButton;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.TextBox searchTextBox;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button removeItemButton;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button selectItemButton;
+        private System.Windows.Forms.Button updateItemButton;
+        private System.Windows.Forms.Button button5;
     }
 }
 
